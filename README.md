@@ -9,7 +9,7 @@
 ## **Entertainment**
 
 Name        | Description                       | Page
-------------|-----------------------------------|-----------------------------------
+-----       |-----                              |-----
  Autohotkey | Programa para atalhos do Spotify  | https://www.autohotkey.com
  Franz      | Programa organiza mensageiros     | https://meetfranz.com/
  Toastify   | Atalhos do Windows                | http://toastify.codeplex.com/
@@ -19,7 +19,7 @@ Name        | Description                       | Page
  ## **Development**
 
 Name            | Description                       | Page                          | Obs
-------------    |-----------------------------------|-------------------------------|--------
+-----           |-----                              |-----                          |-----
  ToolBox        | Gerenciador de downloads Jetbrains| https://www.jetbrains.com/    |
  Postman        | Testes Rest                       | https://www.getpostman.com/   |
  PyCharm        | IDE Desenvolvimento Python        | https://www.jetbrains.com/    |
@@ -30,10 +30,10 @@ Name            | Description                       | Page                      
 
 <br>
 
- ## **Linux**
+ ## **Tools**
 
 Name            | Description   | Page
-------------    |---------------|-----
+-----           |-----          |-----
  Etcher         | Gravar iso    | https://www.balena.io/etcher/
  
  
@@ -41,7 +41,7 @@ Name            | Description   | Page
 
 # Configurations and Plugins 
 
-> ## - **Intellij**
+> ## **Intellij**
 >
 > **Plugins**
 > * GitToolBox
@@ -53,3 +53,21 @@ Name            | Description   | Page
 >Key                                 | Values        |  Description 
 >-----                               |-----          |------
 >project.tree.structure.show.url     | (true, false) | Remove caminho no lado do nome do projeto
+
+> ## **Visual Studio Code (VSC)**
+>
+> **Plugins**
+> * Angular Snippets
+> * Auto Import
+> * Docker
+> * Dracula Official
+> * ESLint
+> * Markdown Shortcuts
+> * Material Icon Theme
+> * Rainbow Brackets
+>
+>**Properties**
+>
+>Key                      | Values        |  Description 
+>-----                    |-----          |------
+>Editor:Format on save    | (true, false) | Formatar codfigo ao salvar
