@@ -47,6 +47,8 @@ Name            | Description   | Page
 > * GitToolBox
 > * Rainbow Brackets
 > * Gradianto (Theme)
+> * Multirun
+> * Extra icons
 >
 >**Properties**
 >
