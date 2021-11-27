@@ -18,15 +18,17 @@ Name        | Description                       | Page
 
  ## **Development**
 
-Name            | Description                       | Page                          | Obs
------           |-----                              |-----                          |-----
- ToolBox        | Gerenciador de downloads Jetbrains| https://www.jetbrains.com/    |
- Postman        | Testes Rest                       | https://www.getpostman.com/   |
- PyCharm        | IDE Desenvolvimento Python        | https://www.jetbrains.com/    |
- Astah          | Modelagem UML                     | http://astah.net/             | Associado ao e-mail ...EDU com licença em anexo
- Sqlite Browser | SGBD Sqlite                       | http://sqlitebrowser.org      |
- NoSqlBooster   | Interface grafica para MongoDb    | https://nosqlbooster.com/home |
- Intellij       | IDE Desenvolvimento Java          | https://www.jetbrains.com/    |
+Name            | Description                       | Page                                          | Obs
+-----           |-----                              |-----                                          |-----
+ ToolBox        | Gerenciador de downloads Jetbrains| https://www.jetbrains.com/                    |
+ Postman        | Testes Rest                       | https://www.getpostman.com/                   |
+ PyCharm        | IDE Desenvolvimento Python        | https://www.jetbrains.com/                    |
+ Astah          | Modelagem UML                     | http://astah.net/                             | Associado ao e-mail ...EDU com licença em anexo
+ Sqlite Browser | SGBD Sqlite                       | http://sqlitebrowser.org                      |
+ NoSqlBooster   | Interface grafica para MongoDb    | https://nosqlbooster.com/home                 |
+ Intellij       | IDE Desenvolvimento Java          | https://www.jetbrains.com/                    |
+ http-server    | Simples servidor Http             | https://www.npmjs.com/package/http-server     | 
+ redis-commander| GUI para Redis                    | https://github.com/joeferner/redis-commander  |
 
 <br>
 
