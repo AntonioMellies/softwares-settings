@@ -1,12 +1,11 @@
-# Softwares & Settings
-
+# Softwares & Settings & Configurations
 <p>
     
 <p>
-
 <br>
 
-## **Entertainment**
+## **Environment and Programs**
+### *General* 
 
 Name        | Description                       | Page
 -----       |-----                              |-----
@@ -14,7 +13,15 @@ Name        | Description                       | Page
  Franz      | Programa organiza mensageiros     | https://meetfranz.com/
  Toastify   | Atalhos do Windows                | http://toastify.codeplex.com/
 
-<br>
+### *To Linux*
+
+Name        | Description                       | Page
+-----       |-----                              |-----
+ Autokey    | Programa para atalhos do Spotify  | https://github.com/autokey/autokey
+ HydraPaper | Programa organiza mensageiros     | https://flathub.org/apps/details/org.gabmus.hydrapaper
+ Flameshot  | Atalhos do Windows                | https://flameshot.org/
+
+<br><br>
 
  ## **Development**
 
@@ -29,20 +36,25 @@ Name            | Description                       | Page                      
  Intellij       | IDE Desenvolvimento Java          | https://www.jetbrains.com/                    |
  http-server    | Simples servidor Http             | https://www.npmjs.com/package/http-server     | 
  redis-commander| GUI para Redis                    | https://github.com/joeferner/redis-commander  |
+ nvm            | Node version manager              | https://github.com/nvm-sh/nvm                 |
 
-<br>
+<br><br>
 
- ## **Tools**
+ ## **Tools and Services**
 
-Name            | Description   | Page
------           |-----          |-----
- Etcher         | Gravar iso    | https://www.balena.io/etcher/
+Name            | Description           | Page
+-----           |-----                  |-----
+ Etcher         | Gravar iso            | https://www.balena.io/etcher/
+ 10minutemail   | Emails temporarios    | https://10minutemail.com
+ Witeboard      | Quadro branco virtual | https://witeboard.com
+ Enpass         | Gerenciador de senhas | https://witeboard.com
+ Authy          | Autenticador 2 fatores| https://authy.com/
  
  
  <br><br>
 
 # Configurations and Plugins 
-
+## IDE's 
 > ## **Intellij**
 >
 > **Plugins**
