@@ -18,7 +18,7 @@ Name        | Description                       | Page
 Name        | Description                       | Page
 -----       |-----                              |-----
  Autokey    | Programa para atalhos do Spotify  | https://github.com/autokey/autokey
- HydraPaper | Programa organiza mensageiros     | https://flathub.org/apps/details/org.gabmus.hydrapaper
+ HydraPaper | Programa organiza Wallpapers      | https://flathub.org/apps/details/org.gabmus.hydrapaper
  Flameshot  | Atalhos do Windows                | https://flameshot.org/
 
 <br><br>
@@ -37,7 +37,8 @@ Name            | Description                       | Page                      
  http-server    | Simples servidor Http             | https://www.npmjs.com/package/http-server     | 
  redis-commander| GUI para Redis                    | https://github.com/joeferner/redis-commander  |
  nvm            | Node version manager              | https://github.com/nvm-sh/nvm                 |
-
+ sdkman         | Gerenciador de kit de desenvolvimento de software              | https://sdkman.io/                            |
+ portainer      | Interface gráfica para Docker     | https://www.portainer.io/                     |
 <br><br>
 
  ## **Tools and Services**
