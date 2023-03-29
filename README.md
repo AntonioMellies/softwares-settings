@@ -9,33 +9,43 @@
 
 Name        | Description                       | Page
 -----       |-----                              |-----
- Autohotkey | Programa para atalhos do Spotify  | https://www.autohotkey.com
+ Autohotkey | Programa para gerenciar atalhos   | https://www.autohotkey.com
  Franz      | Programa organiza mensageiros     | https://meetfranz.com/
  Toastify   | Atalhos do Windows                | http://toastify.codeplex.com/
 
 ### *To Linux*
 
-Name        | Description                       | Page
------       |-----                              |-----
- Autokey    | Programa para atalhos do Spotify  | https://github.com/autokey/autokey
- HydraPaper | Programa organiza Wallpapers      | https://flathub.org/apps/details/org.gabmus.hydrapaper
- Flameshot  | Atalhos do Windows                | https://flameshot.org/
+Name        | Description                           | Page
+-----       |-----                                  |-----
+ Autokey    | Programa para gerenciar atalhos       | https://github.com/autokey/autokey
+ HydraPaper | Programa organiza Wallpapers          | https://flathub.org/apps/details/org.gabmus.hydrapaper
+ Flameshot  | Programa para gerenciar printscreen   | https://flameshot.org/
 
 <br><br>
 
  ## **Development**
 
+### *IDEs*
+Name            | Description           | Page                                          | Obs
+-----           |-----                  |-----                                          |-----
+ Intellij       | IDE Java              | https://www.jetbrains.com/                    |
+ PyCharm        | IDE Python            | https://www.jetbrains.com/                    |
+ GoLand         | IDE GO                | https://www.jetbrains.com/                    |
+ WebStorm       | IDE linguagens Web    | https://www.jetbrains.com/                    |
+ VSCode         | IDE Generica          | https://code.visualstudio.com/                |
+
+### *Others*
+
 Name            | Description                       | Page                                          | Obs
 -----           |-----                              |-----                                          |-----
  ToolBox        | Gerenciador de downloads Jetbrains| https://www.jetbrains.com/                    |
  Postman        | Testes Rest                       | https://www.getpostman.com/                   |
- PyCharm        | IDE Desenvolvimento Python        | https://www.jetbrains.com/                    |
  Astah          | Modelagem UML                     | http://astah.net/                             | Associado ao e-mail ...EDU com licença em anexo
  Sqlite Browser | SGBD Sqlite                       | http://sqlitebrowser.org                      |
  NoSqlBooster   | Interface grafica para MongoDb    | https://nosqlbooster.com/home                 |
- Intellij       | IDE Desenvolvimento Java          | https://www.jetbrains.com/                    |
  http-server    | Simples servidor Http             | https://www.npmjs.com/package/http-server     | 
  redis-commander| GUI para Redis                    | https://github.com/joeferner/redis-commander  |
+ Sense UI       | GUI para  ElasticSearch           | https://www.elastic.co/guide/en/sense/current/introduction.html  |
  nvm            | Node version manager              | https://github.com/nvm-sh/nvm                 |
  sdkman         | Gerenciador de kit de desenvolvimento de software              | https://sdkman.io/                            |
  portainer      | Interface gráfica para Docker     | https://www.portainer.io/                     |
