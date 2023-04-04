@@ -10,6 +10,7 @@ DOCKER_STATUS=1;
 PORTAINER_STATUS=1;
 TLDR_STATUS=1;
 FLAMESHOT_STATUS=1;
+BASHTOP_STATUS=1;
 
 
 echo "======================================================================================================";
@@ -107,6 +108,17 @@ FLAMESHOT_STATUS=$?;
 echo "############## Init - Install flameshot ###############";
 echo -e "\n\n";
 
+echo "############## Init - Install bashtop ###############";
+sudo add-apt-repository ppa:bashtop-monitor/bashtop -y;
+BASHTOP_STATUS=$?;
+sudo apt update -y;
+BASHTOP_STATUS=$?;
+sudo apt install bashtop -y;
+BASHTOP_STATUS=$?;
+echo "############## Init - Install bashtop ###############";
+echo -e "\n\n";
+
+
 echo "======================================================================================================";
 echo "############# End - Environment #################";
 echo "======================================================================================================";
@@ -133,4 +145,5 @@ echo -e "Install portainer: \t `if [ $PORTAINER_STATUS == 0 ]; then $OK_MARK; el
 echo -e "\n ---- Environment steps ---- ";
 echo -e "Install tldr: \t\t `if [ $TLDR_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
 echo -e "Install flameshot: \t `if [ $FLAMESHOT_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
+echo -e "Install bashtop: \t `if [ $BASHTOP_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
 
