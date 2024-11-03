@@ -10,6 +10,7 @@ DOCKER_STATUS=1;
 PORTAINER_STATUS=1;
 TLDR_STATUS=1;
 FLAMESHOT_STATUS=1;
+TERMINATOR_STATUS=1;
 BASHTOP_STATUS=1;
 
 
@@ -69,21 +70,24 @@ echo -e "\n\n";
 echo "############## Init - Install Postman ###############";
 curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh;
 POSTMAN_STATUS=$?;
-echo "############## Init - Install Postman ###############";
+echo "############## End - Install Postman ###############";
 echo -e "\n\n";
 
 echo "############## Init - Install Docker ###############";
 curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh;
 DOCKER_STATUS=$?;
 rm get-docker.sh;
-echo "############## Init - Install Docker ###############";
+echo "### Configure docker permission #######";
+sudo usermod -aG docker $USER
+su -l $USER
+echo "############## End - Install Docker ###############";
 echo -e "\n\n"
 
 echo "############## Init - Install Portainer ###############";
 docker volume create portainer_data;
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest;
 PORTAINER_STATUS=$?;
-echo "############## Init - Install Portainer ###############";
+echo "############## End - Install Portainer ###############";
 echo -e "\n\n"
 
 echo "======================================================================================================";
@@ -99,23 +103,30 @@ echo -e "\n";
 echo "############## Init - Install tldr ###############";
 sudo apt install tldr;
 TLDR_STATUS=$?;
-echo "############## Init - Install tldr ###############";
+echo "############## End - Install tldr ###############";
 echo -e "\n\n";
 
 echo "############## Init - Install flameshot ###############";
 sudo apt-get install flameshot;
 FLAMESHOT_STATUS=$?;
-echo "############## Init - Install flameshot ###############";
+echo "############## End - Install flameshot ###############";
 echo -e "\n\n";
 
-echo "############## Init - Install bashtop ###############";
-sudo add-apt-repository ppa:bashtop-monitor/bashtop -y;
-BASHTOP_STATUS=$?;
-sudo apt update -y;
-BASHTOP_STATUS=$?;
-sudo apt install bashtop -y;
-BASHTOP_STATUS=$?;
-echo "############## Init - Install bashtop ###############";
+# echo "############## Init - Install bashtop ###############";
+# sudo add-apt-repository ppa:bashtop-monitor/bashtop -y;
+# BASHTOP_STATUS=$?;
+# sudo apt update -y;
+# BASHTOP_STATUS=$?;
+# sudo apt install bashtop -y;
+# BASHTOP_STATUS=$?;
+# echo "############## End - Install bashtop ###############";
+# echo -e "\n\n";
+
+echo "############## Init - Install terminator ###############";
+sudo add-apt-repository ppa:gnome-terminator -y;
+sudo apt-get install terminator -y;
+TERMINATOR_STATUS=$?;
+echo "############## End - Install terminator ###############";
 echo -e "\n\n";
 
 
@@ -128,22 +139,35 @@ echo -e "\n\n";
 echo "======================================================================================================";
 echo "############# CheckList #################";
 echo "======================================================================================================";
-OK_MARK="echo -e \xE2\x9C\x94";
-ERROR_MARK="echo -e \xE2\x9D\x8C";
+OK_MARK=✅;
+ERROR_MARK=❌;
 
-echo -e "\n ---- System steps ---- ";
-echo -e "System Update: \t\t `if [ $UPDATE_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
-echo -e "System Upgrade: \t `if [ $UPGRADE_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
+print_status() {
+   status=''
+   if [ $2 -eq 0 ];
+   then
+      status=$OK_MARK; 
+   else
+      status=$ERROR_MARK;
+   fi
+   echo -e "Status $1: \t $status";
+}
 
-echo -e "\n ---- Dev Tools steps ---- ";
-echo -e "Install sdkman: \t `if [ $SDKMAN_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
-echo -e "Install nvm: \t\t `if [ $NVM_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ;
-echo -e "Install postman: \t `if [ $POSTMAN_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
-echo -e "Install docker: \t `if [ $DOCKER_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
-echo -e "Install portainer: \t `if [ $PORTAINER_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ;
 
-echo -e "\n ---- Environment steps ---- ";
-echo -e "Install tldr: \t\t `if [ $TLDR_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
-echo -e "Install flameshot: \t `if [ $FLAMESHOT_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
-echo -e "Install bashtop: \t `if [ $BASHTOP_STATUS == 0 ]; then $OK_MARK; else $ERROR_MARK; fi;`" ; 
+echo -e "\n---- System ---- "
+print_status "update" $UPDATE_STATUS
+print_status "upgrade" $UPGRADE_STATUS
+
+echo -e "\n ---- Dev Tools ---- ";
+print_status "sdkman" $SDKMAN_STATUS
+print_status "nvm" $NVM_STATUS
+print_status "postman" $POSTMAN_STATUS
+print_status "docker" $DOCKER_STATUS
+print_status "portainer" $PORTAINER_STATUS
+
+echo -e "\n ---- Environment ---- ";
+print_status "tldr" $TLDR_STATUS
+print_status "flameshot" $FLAMESHOT_STATUS
+print_status "bashtop" $BASHTOP_STATUS
+print_status "terminator" $TERMINATOR_STATUS
 
